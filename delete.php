@@ -17,12 +17,12 @@ try{
     $e->getMessage();
 }
 
-$sql = "DELETE FROM Persoon
-        WHERE id= :id ";
+$sql = "DELETE FROM  `auto`
+        WHERE Id = :Id ";
 
 $statement = $pdo->prepare($sql);
 
-$statement->bindValue('id',$_GET['id'], PDO::PARAM_INT);
+$statement->bindValue('Id',$_GET['id'], PDO::PARAM_INT);
 
 
 $result = $statement->execute();
@@ -30,10 +30,10 @@ $result = $statement->execute();
 
 if ($result){
     echo "het record is verwijderd";
-    header ('Refresh:1; url=read.php');
+    header ('Refresh:2; url=index.php');
 } else {
     echo "het record is niet verwijderd";
-    header('Refresh:1; url=read.php');
+    header('Refresh:2; url=index.php');
 }
 
 

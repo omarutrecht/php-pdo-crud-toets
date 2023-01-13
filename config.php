@@ -1,6 +1,6 @@
 <?php
 
 $dbHost = 'localhost';
-$dbName = 'php-pdo-crud-proeftoets';
+$dbName = 'dureauto';
 $dbUser = 'root';
 $dbPass = '';
